@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Dynamic Load",
+    "description": "It is used for dynamically loading components. Tag <aot-component></aot-component> is used for integrating this component",
+    "type": "ui",
+    "component": "DynamicLoadComponent",
+    "imageUrl": ""
+  },
+  {
+    "title": "Grid Layout",
+    "description": "This component is used for Grid Layout needs. Tag <grid-layout></grid-layout> is used for invoking this component",
+    "type": "ui",
+    "component": "GridLayoutComponent",
+    "imageUrl": ""
+  },
+  {
+    "title": "Loader",
+    "description": "It is loader & can be used with <loader></loader>",
+    "type": "ui",
+    "component": "LoaderComponent",
+    "imageUrl": ""
+  },
+  {
+    "title": "Sign Out",
+    "description": "This is used to Sign Out an user from the application. tag <signout></signout> can be used to integrate this component",
+    "type": "ui",
+    "component": "SignOutComponent",
+    "imageUrl": ""
+  },
+  {
+    "title": "SW Checkbox",
+    "description": "It is used as Service Works Checkbox & can be used with <sw-checkbox></sw-checkbox> tag",
+    "type": "ui",
+    "component": "SWCheckboxComponent",
+    "imageUrl": ""
+  },
+  {
+    "title": "SW Crossbox",
+    "description": "It is used as Service Works Crossbox & can be used with <sw-crossbox></sw-crossbox> tag",
+    "type": "ui",
+    "component": "SWCrossboxComponent",
+    "imageUrl": ""
+  },
+  {
+    "title": "SW Datepicker",
+    "description": "This component is used  as datepicker component in ServiceWorks. Tag <sw-daterangepicker></sw-daterangepicker> can be used to integrate this component",
+    "type": "ui",
+    "component": "SWDateRangePickerComponent",
+    "imageUrl": ""
+  },
+  {
+    "title": "WijMo Flex Grid",
+    "description": "This component is used to integrate 3rd party utility 'WijMo Flex Grid'.  Tag <wijmo-flex-grid></wijmo-flex-grid> can be used to integrate this component",
+    "type": "ui",
+    "component": "WijmoFlexGridComponent",
+    "imageUrl": ""
+  }
+]

@@ -1,0 +1,74 @@
+
+    <div class="container-fluid">
+        <div class="row mt-1">
+            <div class="col-12">
+
+                <!-- <div>
+                <h4>{{totalCount}} CFO's</h4>
+
+            </div> -->
+                <div class="total-records margin-bottom10" *ngIf="!isError">
+                    <strong>{{totalCount}}</strong>
+                    Advisor<span *ngIf="totalCount > 1">s</span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 error-block" *ngIf="isError">We are unable to process your request at this time. Please try again later.</div>
+            <div class="col-12" *ngIf="!isError">
+                <dx-data-grid id="gridContainer"
+                              [dataSource]="records"
+                              [showColumnLines]="true"
+                              [showRowLines]="true"
+                              [showBorders]="true"
+                              [rowAlternationEnabled]="true"
+                              [columnAutoWidth]="true"
+                              (onContentReady)="contentReady($event)"
+                              [remoteOperations]="true">
+                    <dxo-paging [pageSize]="15"></dxo-paging>
+                    <dxo-pager [showPageSizeSelector]="false"
+                               [allowedPageSizes]="[5, 10, 20]"
+                               [showInfo]="true">
+                    </dxo-pager>
+                    <dxo-load-panel [enabled]="true">
+                    </dxo-load-panel>
+
+                    <dxo-search-panel [visible]="true"
+                                      [width]="300"
+                                      placeholder="Search...">
+                    </dxo-search-panel>
+                    <dxi-column dataField="repID" caption="MRID"></dxi-column>
+                    <dxi-column dataField="advisorName" caption="Name"></dxi-column>
+                    <dxi-column dataField="advisorAddress" caption="Address"></dxi-column>
+                    <dxi-column dataField="advisorCity" caption="City"></dxi-column>
+                    <dxi-column dataField="advisorState" caption="State"></dxi-column>
+                    <dxi-column dataField="advisorZip" caption="Zip"></dxi-column>
+                    <dxi-column dataField="loanAmount" caption="Loan Amount"></dxi-column>
+                    <dxi-column dataField="termLength" caption="Term(Years)"></dxi-column>
+                    <dxi-column dataField="principalForgivenessPerYear" caption="Annual Forgiveness"></dxi-column>
+                    <!--<dxi-column dataField="year2PrincipleForgiveness" caption="Year 2"></dxi-column>
+    <dxi-column dataField="year3PrincipleForgiveness" caption="Year 3"></dxi-column>
+    <dxi-column dataField="year4PrincipleForgiveness" caption="Year 4"></dxi-column>
+    <dxi-column dataField="year5PrincipleForgiveness" caption="Year 5"></dxi-column>
+    <dxi-column dataField="year6PrincipleForgiveness" caption="Year 6"></dxi-column>
+    <dxi-column dataField="year7PrincipleForgiveness" caption="Year 7"></dxi-column>-->
+                    <dxi-column dataField="lplEmail" caption="LPL Email"></dxi-column>
+                    <dxi-column dataField="advisorEmail" caption="Advisor Email"></dxi-column>
+                    <dxi-column dataField="status" caption="Status"></dxi-column>
+                    <dxi-column [allowFiltering]="false" [allowSorting]="false" cellTemplate="Action">
+                        <div *dxTemplate="let a of 'Action'">
+                            <button mdbBtn type="button" color="blue-grey" mdbWavesEffect class="btn btn-sm btn-primary" style="margin-right:10px; padding-top:0px;padding-bottom:0px;"
+                                    (click)="sendPromissoryNote(a)" [disabled]="a.data.status==='Sent'">
+                                SEND
+                            </button>
+                            <button mdbBtn type="button" color="blue-grey" mdbWavesEffect class="btn btn-sm btn-primary" style="padding-top:0px;padding-bottom:0px;" (click)="previewPromissoryNote(a)">
+
+                                PREVIEW
+                            </button>
+                        </div>
+                    </dxi-column>
+
+                </dx-data-grid>
+            </div>
+        </div>
+    </div>

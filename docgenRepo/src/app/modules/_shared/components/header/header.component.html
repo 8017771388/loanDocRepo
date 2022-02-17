@@ -1,0 +1,39 @@
+<header>
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1" [innerHtml]="appTitle"></span>
+        <div class="ml-auto mr-0 order-0" *ngIf="userData">
+            <div class="user-info">
+                <span>
+                    <img class="avatar"
+                         (error)="placeholderUrl()"
+                         [src]="userImageUrl" />&nbsp;
+                </span>
+                <span class="hdr-userinfo text-right"
+                      [innerHtml]="userData.FirstName + ' ' + userData.LastName"></span>
+                <span class="sign-out-span">
+                    |
+                    <a href="javascript:void(0)" (click)="signout()"><strong>Sign Out</strong></a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm bg-light custom-navbar" *ngIf="userData">
+        <ul class="navbar-nav header-navbar">
+            <li class="nav-item" [routerLinkActive]="['active', '']">
+                <a class="nav-link" [routerLink]="['document-center']">Dashboard</a>
+            </li>
+            <li class="nav-item" [routerLinkActive]="['active', '']">
+                <a class="nav-link" [routerLink]="['promissory-note']">Reporting</a>
+            </li>
+            <!-- <li class="nav-item" [routerLinkActive]="['active', '']">
+                <a class="nav-link" [routerLink]="['home']">Loan Documents From CLO</a>
+            </li> -->
+            <!-- <li class="nav-item" [routerLinkActive]="['active', '']">
+                <a class="nav-link" [routerLink]="['promissory-note']">Promissory Note From CSV</a>
+            </li> -->
+
+
+
+        </ul>       
+    </nav>
+</header>

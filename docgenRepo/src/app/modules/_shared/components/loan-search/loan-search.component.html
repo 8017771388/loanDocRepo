@@ -1,0 +1,106 @@
+
+<div class="admin-container container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row admin-serach-container">
+                <div class="col-4 input-group input-group-search">
+                    <label for="grid-search" class="sr-only"></label>
+                    <div class="reset-field">
+                        <input class="form-control grid-search"
+                               placeholder="Search Loan"
+                               type="text" [(ngModel)]="searchText"
+                               (keydown)="searchOnEnter($event)" />
+                        <i class="clear-search fa fa-remove"
+                           (click)="searchText = ''; searchLoan()"
+                           *ngIf="searchText != ''"></i>
+                    </div>
+                    <span class="input-group-btn advisor-panel-search">
+                        <button class="btn text-search-button" (click)="searchLoan()">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <!--<div *ngIf="loanInfo==null || loanInfo==undefined">
+                No loans exists!
+            </div>-->
+            <div>
+
+            </div>
+
+            <div class="core-plan-container clearfix" style="margin-bottom: 25px;" *ngIf="loanInfo">
+                <div class="row pb-4 deal-container-box">
+                    <div class="col-12 deal-container-actors">
+                        <div class="deal-details-card deal-details">
+                            <div class="blue-bg">
+                                <!--<span class="deal-type-heading"><strong>Loan Details</strong></span>-->
+                                <h5>Loan Details</h5>
+                            </div>
+                            <div class="deal-details-subpart">
+                                <div class="cards-body deals-card">
+                                    <div class="row">
+                                        <div class="col-sm-2 pr-0 text-right">
+                                            <span class="">Loan Identifier : </span>
+                                        </div>
+                                        <div class="col-sm-3 text-ellipsis text-left">
+                                            <strong title="{{loanInfo.lplMain.cloappid }}">
+                                                {{loanInfo.lplMain.cloappid}}
+                                            </strong>
+                                        </div>
+                                        <div class="col-xl-2 pl-0 text-right ">
+                                            <span class="">Loan Amount : </span>
+                                        </div>
+                                        <div class="col-xl-3 pl-0 text-ellipsis text-left ">
+                                            <strong title="{{ loanInfo.root.advisorDetails.advisorRequestedLoanAmount }}">
+                                                {{
+                                            loanInfo.root.advisorDetails.advisorRequestedLoanAmount
+                                                }}
+                                            </strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="row margin-top5">
+                                        <div class="col-sm-2 pr-0 text-right">
+                                            <span class="">
+                                                Borrower{{
+                                            loanInfo.root.advisorDetails.subLoanAdvisors?.length > 0
+                                                ? "s"
+                                                : ""
+                                                }}
+                                                :
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-3 text-left">
+                                            <ul class="seller-buyer-list"
+                                                *ngIf="loanInfo.root.advisorDetails.subLoanAdvisors?.length > 0">
+                                                <li *ngFor="
+                                                let b of loanInfo.root.advisorDetails.subLoanAdvisors
+                                            "
+                                                    class="text-ellipsis">
+                                                    <strong title="{{b.firstname +' ' +b.lastname}}">
+                                                        {{b.firstname +' ' +b.lastname}}
+                                                    </strong>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,42 @@
+<!-- Sidebar  -->
+<nav class="sidebar" [ngClass]="status ? 'active' : ''">
+    <div class="toggle-button">
+            <button type="button" id="sidebarCollapse" class="custom-button" (click)="clickEvent()">
+                <span>Hide</span>
+            </button>
+    </div>
+    <div class="sidebar-header">
+        <h3>Documents</h3>
+    </div>
+
+    <ul class="side-bar-list">
+        <li (click) ="gridData('1')" [ngClass]="{'white':alladvisor=='1'}">Line Of Credit Agreement And Note</li>
+        <li (click) ="gridData('2')"  [ngClass]="{'white':alladvisor=='2'}">Working Capital Loan Over $75K With Collateral Language</li>
+        <li (click) ="gridData('3')"  [ngClass]="{'white':alladvisor=='3'}" >Working Capital Loan co-borrower template</li>
+        <li (click) ="gridData('4')"  [ngClass]="{'white':alladvisor=='4'}" >Acquisition Loan Declining Payments</li>
+        <li (click) ="gridData('5')"  [ngClass]="{'white':alladvisor=='5'}" >Acquisition Loan Co-borrower(s) Equal payments</li>
+        <li (click) ="gridData('6')"  [ngClass]="{'white':alladvisor=='6'}" >Acquisition Loan Equal Payments</li>
+        <li (click) ="gridData('7')"  [ngClass]="{'white':alladvisor=='7'}" >vCFO Acquisition Loan Declining Payments</li>
+        <li (click) ="gridData('8')"  [ngClass]="{'white':alladvisor=='8'}" >vCFO Acquisition Loan Equal Payments</li>
+        <li (click) ="gridData('9')"  [ngClass]="{'white':alladvisor=='9'}" >1 Year Forgivable</li>
+        <li (click) ="gridData('10')"  [ngClass]="{'white':alladvisor=='10'}" >3 Year Forgivable</li>
+        <li (click) ="gridData('11')"  [ngClass]="{'white':alladvisor=='11'}" >5 Year Forgivable TA Co-Borrower Note</li>
+        <li (click) ="gridData('12')"  [ngClass]="{'white':alladvisor=='12'}" >5 Year Forgivable</li>
+        <li (click) ="gridData('13')"  [ngClass]="{'white':alladvisor=='13'}" >7 Year Forgivable</li>
+        <li (click) ="gridData('14')"  [ngClass]="{'white':alladvisor=='14'}" >9 Year Forgivable</li>
+        <li (click) ="gridData('15')"  [ngClass]="{'white':alladvisor=='15'}" >10 Year Forgivable</li>
+        <li (click) ="gridData('16')"  [ngClass]="{'white':alladvisor=='16'}" >Ext. Refinance Loan Declining Payments</li>
+        <li (click) ="gridData('17')"  [ngClass]="{'white':alladvisor=='17'}" >Ext. Refinance Loan Equal Payments</li>
+        <li (click) ="gridData('18')"  [ngClass]="{'white':alladvisor=='18'}" >Growth Loan Declining Payments</li>
+        <li (click) ="gridData('19')"  [ngClass]="{'white':alladvisor=='19'}" >Growth Loan Equal Payments</li>
+        <li (click) ="gridData('20')"  [ngClass]="{'white':alladvisor=='20'}" >Growth Loan with Co-borrower(s) Equal pyments</li>
+        <li (click) ="gridData('21')"  [ngClass]="{'white':alladvisor=='21'}" >vCFO Growth Loan Declining Payments</li>
+        <li (click) ="gridData('22')"  [ngClass]="{'white':alladvisor=='22'}" >vCFO Growth Loan Equal Payments</li>
+        <li (click) ="gridData('23')"  [ngClass]="{'white':alladvisor=='23'}" >Int. Refinance Loan Declining Payments</li>
+        <li (click) ="gridData('24')"  [ngClass]="{'white':alladvisor=='24'}" >Int. Refinance Loan Equal Payments</li>
+        <li (click) ="gridData('25')"  [ngClass]="{'white':alladvisor=='25'}" >Virtual CFO Ext. Refinance Loan Declining Payments</li>
+        <li (click) ="gridData('26')"  [ngClass]="{'white':alladvisor=='26'}" >Virtual CFO Ext. Refinance Loan Equal Payments</li>
+        <li (click) ="gridData('27')"  [ngClass]="{'white':alladvisor=='27'}" >Virtual CFO Int. Refinance Declining Payments</li>
+        <li (click) ="gridData('28')"  [ngClass]="{'white':alladvisor=='28'}" >Virtual CFO Int. Refinance Equal Payments</li>
+    </ul>
+</nav>

@@ -1,0 +1,30 @@
+.modal-header {
+    padding-bottom: 0;
+    -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.4);
+    position: relative;
+
+    .view-link {
+        font-size: 14px;
+        color: #000;
+        position: absolute;
+        left: 18px;
+        top: 60px;
+
+        a {
+            color: #007bff;
+            text-decoration: underline;
+        }
+    }
+}
+
+.modal-footer {
+    height: 100px;
+    -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

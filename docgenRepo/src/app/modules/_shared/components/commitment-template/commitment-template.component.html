@@ -1,0 +1,16 @@
+<div class="modal-header header-section text-center">
+    <button type="button"
+            class="close close-btn corss-btn-lft"
+            data-dismiss="modal"
+            role="img"
+            title="Close Button"
+            aria-label="Close Button"
+            alt="[Close Button]"
+            (click)="bsModalRef.hide()">
+        &times;
+    </button>
+</div>
+<div class="modal-body" style="height:900px !important;">
+
+    <app-webviewer [base64]="base64"></app-webviewer>
+</div>

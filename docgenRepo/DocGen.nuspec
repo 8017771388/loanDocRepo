@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DocGen</id>
+    <version>1.0.0.0</version>
+    <title>DocGen</title>
+    <authors>Mark</authors>
+    <owners>Marissa</owners>
+    <description>DocGen Web Application</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2018</copyright>
+  </metadata>
+  <files>
+    <file src="dist\DocGen\**\*.*" target="\" exclude="dist\DocGen\assets\`configEnvironment.js;dist\DocGen\assets\token.configEnvironment.js;" />
+    <file src="dist\DocGen\assets\token.configEnvironment.js" target="\assets\configEnvironment.js" />
+    <!--<file src="web.config" target="\" />-->
+  </files>
+</package>
